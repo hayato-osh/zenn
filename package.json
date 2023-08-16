@@ -1,12 +1,18 @@
 {
   "name": "zenn",
   "version": "1.0.0",
-  "description": "",
-  "author": "hayato-osh",
+  "description": "fastman's zenn articles and books",
+  "author": "fastman",
+  "scripts": {
+    "lint:text": "textlint articles/*.md books/*.md",
+    "fix:text": "textlint articles/*.md books/*.md --fix"
+  },
   "devDependencies": {
     "textlint": "^13.3.3"
   },
   "dependencies": {
+    "textlint-filter-rule-comments": "^1.2.2",
+    "textlint-rule-preset-ja-technical-writing": "^8.0.0",
     "zenn-cli": "^0.1.144"
   }
 }
