@@ -1,0 +1,12 @@
+{
+  "name": "zenn",
+  "version": "1.0.0",
+  "description": "",
+  "author": "hayato-osh",
+  "devDependencies": {
+    "textlint": "^13.3.3"
+  },
+  "dependencies": {
+    "zenn-cli": "^0.1.144"
+  }
+}
