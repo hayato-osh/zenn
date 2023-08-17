@@ -1,7 +1,12 @@
-{
+    {
     "rules": {
         "preset-ja-technical-writing": true,
-        "textlint-rule-no-dropping-the-ra": true
+        "textlint-filter-rule-comments": true,
+        "preset-ja-spacing": {
+            "ja-space-between-half-and-full-width": {
+                 "space": "always"
+             }
+        }
     },
     "filters": {
         "comments": true
