@@ -3,7 +3,7 @@ title: "SNSのアクセシブルな投稿について考える"
 emoji: "🦽"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["accessibility", "アクセシビリティ"]
-published: false
+published: true
 ---
 
 ## アクセシブルな投稿
