@@ -18,6 +18,8 @@ published: true
 先述の通り、X では画像の投稿時に、代替テキストをつけられます。画像の投稿の際は代替テキストをつけることを心がけましょう。
 X のヘルプセンターでは良い画像の説明を作成する方法が紹介されています。
 https://help.twitter.com/ja/using-twitter/write-image-descriptions
+また、代替テキストがない場合にリマインドする機能があるため、こちらの設定も有効にしておくとよいでしょう。
+https://help.twitter.com/ja/using-twitter/set-image-description-reminder
 
 ## 動画コンテンツ<!-- textlint-disable ja-technical-writing/no-doubled-joshi -->
 動画コンテンツは、映像と音声の 2 つの構成要素を持つことがほとんどです。そのため視覚や聴覚の障害をもった方々への一部コンテンツ及び全ての提供が難しいです。<!-- textlint-disable ja-technical-writing/no-doubled-joshi -->
