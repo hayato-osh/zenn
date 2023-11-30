@@ -16,6 +16,7 @@ React × TypeScript 開発において、CSS フレームワーク選定する�
 
 ## happy-css-modules とは
 `Typed, definition jumpable CSS Modules. Moreover, easy!` をテーマにしたライブラリでクラス名から直接 CSS Modules 側の定義場所にコードジャンプできるようになります。
+https://github.com/mizdra/happy-css-modules
 
 このライブラリについては開発者の mizdra さん本人によるこちらの記事で詳しく紹介されていますので、本記事では割愛させていただきます。
 
