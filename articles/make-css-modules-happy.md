@@ -18,6 +18,7 @@ React × TypeScript 開発において、CSS フレームワーク選定する�
 `Typed, definition jumpable CSS Modules. Moreover, easy!` をテーマにしたライブラリでクラス名から直接 CSS Modules 側の定義場所にコードジャンプできるようになります。
 
 このライブラリについては開発者の mizdra さん本人によるこちらの記事で詳しく紹介されていますので、本記事では割愛させていただきます。
+
 他の類似ライブラリとの比較もされているので、ご覧ください。
 https://www.mizdra.net/entry/2022/11/14/102506
 
@@ -40,8 +41,9 @@ npm i -D happy-css-modules
 
 ### ファイルをネストする
 happy-css-modules によって生成された `.module.css.d.ts` と `.module.css.d.ts.map` はコードジャンプが可能になる一方で弊害もあります。
-`.module.css` と同じ階層に生成されるため、直接参照することのない無駄なファイルが増えてしまいます。
-`tsx` や `.stories.tsx` などのファイルとコロケーションしている場合は特に気になるところだと思います。
+
+`.module.css` と同じ階層に生成されるため、直接参照することのない無駄なファイルが増えてしまいます。`.tsx` や `.stories.tsx` などのファイルとコロケーションしている場合は特に気になるところだと思います。
+
 そこで、VSCode ユーザーは `Explorer file nesting` という機能を使ってファイルをネストすることができます。
 ```json:.vscode/settings.json
 {
@@ -57,6 +59,7 @@ happy-css-modules によって生成された `.module.css.d.ts` と `.module.cs
 
 ### CLI
 `hcm` コマンドで型定義ファイルを生成できますが、このままだと新しいファイルを作成するたびにコマンドを実行する必要があります。
+
 そこで、`hcm` コマンドの watch オプションを使ってファイルの変更を検知して自動で型定義ファイルを生成するようにします。
 dev サーバーを立ち上げる際に以下の npm scripts を実行するようにしておくと良いでしょう。
 ```json:package.json
@@ -70,6 +73,7 @@ dev サーバーを立ち上げる際に以下の npm scripts を実行するよ
 
 ### 生成されたファイルを ignore する
 好みの話になりますが、今回の場合生成されるファイルは直接開発時に使うものではなく、watch している場合自動で生成され、開発者間で差異が出るものでもないので、 git の管理対象から外しても良いと言えます。
+
 そのため、各種 ignore ファイルに追記しておくと良いでしょう。
 ```gitignore:.gitignore
 # happy-css-modules
@@ -78,8 +82,11 @@ dev サーバーを立ち上げる際に以下の npm scripts を実行するよ
 ```
 
 しかし、ignore した際に弊害として、他の開発メンバーによって`.module.css` ファイルのディレクトリを変更された場合、その変更が自身のローカル環境には反映されず、module.css は存在しないにも関わらず、`.module.css.d.ts` と `.module.css.d.ts.map` ファイルが残ってしまうという問題があります。
+
 そのため、`.module.css` ファイルが存在しない場合は `.module.css.d.ts` と `.module.css.d.ts.map` も削除するようにすると良いでしょう。
-以下は Chat GPT に生成してもらった(一部加筆修正済み) Node.js スクリプトです。(Node.js に詳しくないのでよりよいコードの修正案をGitHubでお待ちしております。)
+
+以下は Chat GPT に生成してもらった(一部加筆修正済み) Node.js スクリプトです。
+(Node.js に詳しくないのでよりよいコードの修正案をGitHubでお待ちしております。)
 ```js:scripts/remove-hcm.ts
 const fs = require("fs");
 const path = require("path");
