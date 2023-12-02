@@ -7,6 +7,8 @@ publication_name: "yumemi_inc"
 published: true
 published_at: "2023-12-03 09:00"
 ---
+この記事は[株式会社ゆめみの23卒 Advent Calendar 2023](https://qiita.com/advent-calendar/2023/yumemi-23-graduation)3日目の記事です。
+
 ![YUMEMI New Grad Advent Calendar 2023](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/672609/6d8a7098-9aef-a19a-54fe-83a2d493e033.png)
 React × TypeScript 開発において、CSS フレームワーク選定する際に CSS Modules が候補に上がると思います。その際のネガティブな意見として開発者体験が他のフレームワークと比べて良くないというのがあるのではないでしょうか。
 
