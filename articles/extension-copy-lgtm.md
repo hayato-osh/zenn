@@ -3,6 +3,7 @@ title: "GitHub 上で LGTM 画像をペーストできたら嬉しくない？"
 emoji: "✅"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["chrome", "github", "plasmo", "extension"]
+publication_name: "yumemi_inc"
 published: true
 ---
 
